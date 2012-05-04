@@ -3,82 +3,97 @@ package ini4idea.lang.parser;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiParser;
-import com.intellij.packageDependencies.ui.Marker;
 import com.intellij.psi.tree.IElementType;
 import ini4idea.lang.IniTokenTypes;
 import org.jetbrains.annotations.NotNull;
+
+//import com.intellij.packageDependencies.ui.Marker;
 
 /**
  * @author Konstantin Ulitin
  */
 public class IniParser implements PsiParser {
 
-  @NotNull
-  @Override
-  public ASTNode parse(IElementType root, PsiBuilder builder) {
-    builder.setDebugMode(true); // TODO remove
-    PsiBuilder.Marker rootMarker = builder.mark();
-    while (parseSection(builder)) {}
-    rootMarker.done(root);
-    return builder.getTreeBuilt();
-  }
-
-  /**
-   * @param  builder Psi builder
-   * @return false if EOF was reached
-   */
-  private boolean parseSection(PsiBuilder builder) {
-    if (builder.eof()) { return false; }
-    while (builder.getTokenType() != IniTokenTypes.SECTION && !builder.eof()) {
-      // TODO Assert tpkentype == EOL
-      builder.advanceLexer();
+    @NotNull
+    @Override
+    public ASTNode parse(IElementType root, PsiBuilder builder) {
+        //builder.setDebugMode(true); // TODO remove
+        PsiBuilder.Marker rootMarker = builder.mark();
+        while (parseSection(builder)) {
+        }
+        rootMarker.done(root);
+        return builder.getTreeBuilt();
     }
 
-    PsiBuilder.Marker section = builder.mark();
-    // TODO assert builder.getTokenType() == IniTokenTypes.SECTION
-    builder.advanceLexer();
-    while (parseAssign(builder)) {}
-    section.done(IniTokenTypes.SECTION);
+    /**
+     * @param builder Psi builder
+     * @return false if EOF was reached
+     */
+    private boolean parseSection(PsiBuilder builder) {
+        if (builder.eof()) {
+            return false;
+        }
+        while (builder.getTokenType() != IniTokenTypes.SECTION && !builder.eof()) {
+            // TODO Assert tpkentype == EOL
+            builder.advanceLexer();
+        }
 
-    return true;
-  }
+        PsiBuilder.Marker section = builder.mark();
+        // TODO assert builder.getTokenType() == IniTokenTypes.SECTION
+        builder.advanceLexer();
+        while (parseAssign(builder)) {
+        }
+        section.done(IniTokenTypes.SECTION);
 
-  private boolean parseAssign(PsiBuilder builder) {
-    if (builder.getTokenType() == IniTokenTypes.EOL) {
-      builder.advanceLexer();
-      return true;
+        return true;
     }
-    if (builder.getTokenType() != IniTokenTypes.STRING) { return false; }
 
-    PsiBuilder.Marker assign = builder.mark();
+    private boolean parseAssign(PsiBuilder builder) {
+        if (builder.getTokenType() == IniTokenTypes.EOL) {
+            builder.advanceLexer();
+            return true;
+        }
 
-    PsiBuilder.Marker lval = builder.mark();
-    while (parseString(builder)) {}
-    lval.done(IniTokenTypes.LVAL);
+        if (builder.getTokenType() != IniTokenTypes.STRING) {
+            return false;
+        }
 
-    // TODO assert builder.getTokenType() == IniTokenTypes.EQUAL
-    builder.advanceLexer();
+        PsiBuilder.Marker assign = builder.mark();
 
-    PsiBuilder.Marker rval = builder.mark();
-    while (parseString(builder)) {}
-    rval.done(IniTokenTypes.RVAL);
+        PsiBuilder.Marker lval = builder.mark();
+        while (parseString(builder)) {
+        }
+        lval.done(IniTokenTypes.LVAL);
 
-    assign.done(IniTokenTypes.ASSIGN);
+        if (builder.getTokenType() != IniTokenTypes.EQUAL) {
+            assign.drop();
+            return false;
+        }
 
-    // TODO assert builder.getTokenType() == IniTokenTypes.EOL
-    builder.advanceLexer();
+        builder.advanceLexer();
 
-    return true;
-  }
+        PsiBuilder.Marker rval = builder.mark();
+        while (parseString(builder)) {
+        }
+        rval.done(IniTokenTypes.RVAL);
 
-  private boolean parseString(PsiBuilder builder) {
-    if (builder.getTokenType() != IniTokenTypes.STRING) { return false; }
+        assign.done(IniTokenTypes.ASSIGN);
 
-    PsiBuilder.Marker str = builder.mark();
-    builder.advanceLexer();
-    str.done(IniTokenTypes.STRING);
+        // TODO assert builder.getTokenType() == IniTokenTypes.EOL
+        builder.advanceLexer();
 
-    return true;
+        return true;
+    }
 
-  }
+    private boolean parseString(PsiBuilder builder) {
+        if (builder.getTokenType() != IniTokenTypes.STRING) {
+            return false;
+        }
+
+        PsiBuilder.Marker str = builder.mark();
+        builder.advanceLexer();
+        str.done(IniTokenTypes.STRING);
+
+        return true;
+    }
 }

@@ -17,27 +17,36 @@ import java.util.Map;
  */
 public class IniSyntaxHighlighter extends SyntaxHighlighterBase {
 
-  private static final Map<IElementType, TextAttributesKey> ATTRIBUTES = new HashMap<IElementType, TextAttributesKey>();
-  static {
-    fillMap(ATTRIBUTES,
-            TextAttributesKey.createTextAttributesKey("INI.COMMENT", SyntaxHighlighterColors.LINE_COMMENT.getDefaultAttributes()),
-            IniTokenTypes.COMMENT);
-    fillMap(ATTRIBUTES,
-            TextAttributesKey.createTextAttributesKey("INI.SECTION", SyntaxHighlighterColors.KEYWORD.getDefaultAttributes()),
-            IniTokenTypes.SECTION);
-    fillMap(ATTRIBUTES,
-            TextAttributesKey.createTextAttributesKey("INI.VALUE", SyntaxHighlighterColors.STRING.getDefaultAttributes()),
-            IniTokenTypes.STRING);
-  }
-  @NotNull
-  @Override
-  public Lexer getHighlightingLexer() {
-    return new IniLexer();
-  }
+    private static final Map<IElementType, TextAttributesKey> ATTRIBUTES = new HashMap<IElementType, TextAttributesKey>();
 
-  @NotNull
-  @Override
-  public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
-    return pack(ATTRIBUTES.get(tokenType));
-  }
+    public static Map<IElementType, TextAttributesKey> getTextAttributesMap() {
+        return ATTRIBUTES;
+    }
+
+    static {
+        fillMap(ATTRIBUTES,
+                TextAttributesKey.createTextAttributesKey("INI.COMMENT", SyntaxHighlighterColors.LINE_COMMENT.getDefaultAttributes()),
+                IniTokenTypes.COMMENT);
+        fillMap(ATTRIBUTES,
+                TextAttributesKey.createTextAttributesKey("INI.SECTION", SyntaxHighlighterColors.KEYWORD.getDefaultAttributes()),
+                IniTokenTypes.SECTION);
+        fillMap(ATTRIBUTES,
+                TextAttributesKey.createTextAttributesKey("INI.VALUE", SyntaxHighlighterColors.STRING.getDefaultAttributes()),
+                IniTokenTypes.STRING);
+        fillMap(ATTRIBUTES,
+                TextAttributesKey.createTextAttributesKey("INI.EQUALS", SyntaxHighlighterColors.OPERATION_SIGN.getDefaultAttributes()),
+                IniTokenTypes.EQUAL);
+    }
+
+    @NotNull
+    @Override
+    public Lexer getHighlightingLexer() {
+        return new IniLexer();
+    }
+
+    @NotNull
+    @Override
+    public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
+        return pack(ATTRIBUTES.get(tokenType));
+    }
 }

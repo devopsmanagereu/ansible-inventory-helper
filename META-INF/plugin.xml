@@ -1,22 +1,27 @@
 <idea-plugin version="2">
-  <name>Ini4Idea</name>
-  <description>.ini files support</description>
-  <version>0.1</version>
-  <vendor>Konstantin Ulitin</vendor>
-  <idea-version since-build="8000"/>
+    <name>Ini4Idea</name>
+    <version>0.5</version>
+    <vendor>Alexei Vasin</vendor>
+    <idea-version since-build="112.0"/>
 
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
+    <depends>com.intellij.modules.lang</depends>
+    <!--<depends>com.intellij.properties</depends>-->
 
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
+    <category>Custom Languages</category>
+    <description>Provides ".ini" files support.</description>
+    <id>com.jetbrains.plugins.ini4idea</id>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <fileTypeFactory implementation="ini4idea.file.IniFileTypeFactory"/>
-    <syntaxHighlighter key="Ini" implementationClass="ini4idea.highlighter.IniSyntaxHighlighter"/>
-    <lang.parserDefinition language="Ini" implementationClass="ini4idea.lang.parser.IniParserDefinition"/>
-    <lang.foldingBuilder language="Ini" implementationClass="ini4idea.folding.IniFoldingBuilder"/>
-  </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="ini4idea.file.IniFileTypeFactory"/>
+        <colorSettingsPage implementation="ini4idea.highlighter.IniColorSettingsPage"/>
+        <syntaxHighlighter key="Ini" implementationClass="ini4idea.highlighter.IniSyntaxHighlighter"/>
+        <lang.parserDefinition language="Ini" implementationClass="ini4idea.lang.parser.IniParserDefinition"/>
+        <lang.foldingBuilder language="Ini" implementationClass="ini4idea.folding.IniFoldingBuilder"/>
+        <annotator language="Ini" implementationClass="ini4idea.IniAnnotator"/>
+        <lang.formatter language="Ini" implementationClass="ini4idea.formatting.IniFormattingModelBuilder"/>
+        <lang.psiStructureViewFactory language="Ini"
+                                      implementationClass="ini4idea.structureView.IniStructureViewFactory"/>
+    </extensions>
+
 </idea-plugin>

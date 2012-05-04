@@ -9,7 +9,7 @@ import java.io.Reader;
  */
 public class IniLexer extends FlexAdapter {
 
-  public IniLexer() {
-    super(new _IniLexer((Reader) null));
-  }
+    public IniLexer() {
+        super(new _IniLexer((Reader) null));
+    }
 }

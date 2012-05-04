@@ -19,11 +19,14 @@ import ini4idea.lang.IniTokenTypes;
 %eof}
 
 EOL= \n | \r | \r\n
-COMMENT=;[^\r\n]*
+COMMENTCONTENT=[^\r\n]*
+EZCOMMENT=#{COMMENTCONTENT}
+ZENDCOMMENT=;{COMMENTCONTENT}
+COMMENT={EZCOMMENT} | {ZENDCOMMENT}
 WHITESPACE=[\ \t\f]+
 SECTION=\[[^\]]+\]
 EQUAL=\=
-STRING=[^\n\r\f\ \t\[\]\=;]+
+STRING=\".*\" | [^\n\r\f\ \t\=]+
 
 %%
 

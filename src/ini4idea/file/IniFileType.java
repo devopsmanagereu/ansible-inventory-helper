@@ -11,34 +11,33 @@ import javax.swing.*;
  * @author Konstantin Ulitin
  */
 public class IniFileType extends LanguageFileType {
-  public static final IniFileType INSTANCE = new IniFileType();
-  public static final String DEFAULT_EXTENSION = "ini";
-  
-  private IniFileType() {
-    super(IniLanguage.INSTANCE);
-  }
+    public static final IniFileType INSTANCE = new IniFileType();
+    public static final String DEFAULT_EXTENSION = "ini";
 
-  @NotNull
-  @Override
-  public String getName() {
-    return "Ini";
-  }
+    private IniFileType() {
+        super(IniLanguage.INSTANCE);
+    }
 
-  @NotNull
-  @Override
-  public String getDescription() {
-    return ".ini file";
-  }
+    @NotNull
+    @Override
+    public String getName() {
+        return "Ini";
+    }
 
-  @NotNull
-  @Override
-  public String getDefaultExtension() {
-    return DEFAULT_EXTENSION;
-  }
+    @NotNull
+    @Override
+    public String getDescription() {
+        return ".ini file";
+    }
 
-  @Override
-  public Icon getIcon() {
-    return IconLoader.getIcon("/debugger/threads.png");
-  }
+    @NotNull
+    @Override
+    public String getDefaultExtension() {
+        return DEFAULT_EXTENSION;
+    }
 
+    @Override
+    public Icon getIcon() {
+        return IconLoader.getIcon("/debugger/threads.png");
+    }
 }
