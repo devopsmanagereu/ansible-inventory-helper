@@ -43,9 +43,12 @@ public class IniSectionBlock extends IniBlock {
             }
         }
 
-        List<Block> subResult = result.subList(0, pos + 2);
-
-        return subResult;
+        if (pos + 2 < result.size()) {
+            List<Block> subResult = result.subList(0, pos + 2);
+            return subResult;
+        } else {
+            return result;
+        }
     }
 
     @Override

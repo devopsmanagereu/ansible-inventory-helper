@@ -21,7 +21,7 @@ public class IniFileBlock extends IniBlock {
     public List<Block> getSubBlocks() {
         final ArrayList<Block> blocks = new ArrayList<Block>();
         for (ASTNode node : getNode().getChildren(null)) {
-            if (node.getElementType() == IniTokenTypes.SECTION) {
+            if (node.getElementType() == IniTokenTypes.SECTION || node.getElementType() == IniTokenTypes.COMMENT) {
                 blocks.add(new IniSectionBlock(node, Indent.getNoneIndent()));
             }
         }
@@ -35,7 +35,13 @@ public class IniFileBlock extends IniBlock {
 
     @Override
     public Spacing getSpacing(Block child1, Block child2) {
-        return Spacing.createSpacing(0, 0, 1, false, 0);
+        IniBlock block1 = (IniBlock) child1;
+        IniBlock block2 = (IniBlock) child2;
+
+        if (block1.getNode().getElementType() == IniTokenTypes.COMMENT && block2.getNode().getElementType() == IniTokenTypes.SECTION) {
+            return Spacing.createSpacing(0, 0, 2, false, 10);
+        }
+        return Spacing.createSpacing(0, 0, 1, true, 0);
     }
 
     @NotNull

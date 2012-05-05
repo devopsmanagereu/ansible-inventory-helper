@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ini4idea:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ini4idea_jar</output-path>
+    <root id="archive" name="ini4idea.jar">
+      <element id="module-output" name="ini4idea" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/plugin.xml" />
+      </element>
+    </root>
+  </artifact>
+</component>
