@@ -1,14 +1,10 @@
 package ini4idea.lang.psi;
 
-import com.intellij.extapi.psi.ASTWrapperPsiElement;
-import com.intellij.lang.ASTNode;
+import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiNamedElement;
 
 /**
- * @author Konstantin Ulitin
+ * @author Alexei Vasin
  */
-public class IniSection extends ASTWrapperPsiElement {
-
-  public IniSection(@org.jetbrains.annotations.NotNull ASTNode node) {
-    super(node);
-  }
+public interface IniSection extends PsiElement, PsiNamedElement {
 }

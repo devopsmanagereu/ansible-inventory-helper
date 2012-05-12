@@ -6,7 +6,7 @@ import com.intellij.psi.PsiElement;
 import com.intellij.util.containers.hash.HashSet;
 import ini4idea.lang.psi.IniAssign;
 import ini4idea.lang.psi.IniFile;
-import ini4idea.lang.psi.IniSection;
+import ini4idea.lang.psi.IniSectionImpl;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
@@ -25,11 +25,13 @@ public class IniAnnotator implements Annotator {
             PsiElement children[] = element.getChildren();
 
             for (PsiElement elem : children) {
-                if (elem instanceof IniSection) {
-                    String sectionKey = elem.getFirstChild().getText();
+                if (elem instanceof IniSectionImpl) {
+                    PsiElement child = elem.getFirstChild();
+                    assert child != null;
+                    String sectionKey = child.getText();
 
                     if (sectionSet.contains(sectionKey)) {
-                        holder.createWarningAnnotation(elem.getFirstChild(), "Duplicate section");
+                        holder.createWarningAnnotation(child, "Duplicate section");
                     } else {
                         sectionSet.add(sectionKey);
                     }
@@ -41,6 +43,7 @@ public class IniAnnotator implements Annotator {
                         if (sectionElement instanceof IniAssign) {
                             PsiElement e = sectionElement.getFirstChild();
 
+                            assert e != null;
                             String key = e.getText();
 
                             if (s.contains(key)) {

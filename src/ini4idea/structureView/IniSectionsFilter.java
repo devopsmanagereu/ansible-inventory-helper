@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Alexei Vasin
  */
 public class IniSectionsFilter implements Filter {
-    private static final String FILTER_NAME = "Show Sections";
+    private static final String FILTER_NAME = "Show Directives in Sections";
 
     @Override
     public boolean isVisible(TreeElement treeNode) {

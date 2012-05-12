@@ -28,12 +28,12 @@ public class IniLeafBlock extends IniBlock {
 
     @Override
     public Spacing getSpacing(Block child1, Block child2) {
-        return null;
+        return Spacing.createSpacing(0, 0, 0, false, 0);
     }
 
     @NotNull
     @Override
     public ChildAttributes getChildAttributes(int newChildIndex) {
-        return null;
+        return new ChildAttributes(Indent.getNoneIndent(), null);
     }
 }

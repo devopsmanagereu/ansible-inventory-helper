@@ -15,7 +15,7 @@ public class IniPsiCreator {
         final IElementType astNodeType = node.getElementType();
         // TODO try to make some enum for here
         if (astNodeType == IniTokenTypes.SECTION) {
-            return new IniSection(node);
+            return new IniSectionImpl(node);
         } else if (astNodeType == IniTokenTypes.ASSIGN) {
             return new IniAssign(node);
         } else if (astNodeType == IniTokenTypes.LVAL) {

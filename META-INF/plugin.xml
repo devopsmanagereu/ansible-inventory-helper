@@ -22,6 +22,8 @@
         <lang.formatter language="Ini" implementationClass="ini4idea.formatting.IniFormattingModelBuilder"/>
         <lang.psiStructureViewFactory language="Ini"
                                       implementationClass="ini4idea.structureView.IniStructureViewFactory"/>
+        <lang.namesValidator language="Ini" implementationClass="ini4idea.lang.IniValidator"/>
+        <!--<renameHandler implementation="ini4idea.lang.refactoring.IniRenameHandler"/>-->
     </extensions>
 
 </idea-plugin>
