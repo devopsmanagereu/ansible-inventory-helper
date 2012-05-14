@@ -27,6 +27,10 @@ public final class IniTokenTypes {
     public static final IElementType LVAL = new IniElementType("LVAL");
     public static final IElementType RVAL = new IniElementType("RVAL");
 
+    public static final IElementType KEY_CHARACTERS = new IniElementType("KEY_CHARACTERS");
+    public static final IElementType VALUE_CHARACTERS = new IniElementType("VALUE_CHARACTERS");
+
+
     private IniTokenTypes() {
     }
 }

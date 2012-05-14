@@ -21,7 +21,8 @@ public class IniColorSettingsPage implements ColorSettingsPage {
     static {
         final Map<IElementType, TextAttributesKey> m = IniSyntaxHighlighter.getTextAttributesMap();
         ATTRS = new AttributesDescriptor[]{
-                new AttributesDescriptor("Directive Name", m.get(IniTokenTypes.STRING)),
+                new AttributesDescriptor("Directive Key", m.get(IniTokenTypes.KEY_CHARACTERS)),
+                new AttributesDescriptor("Directive Value", m.get(IniTokenTypes.VALUE_CHARACTERS)),
                 new AttributesDescriptor("Section", m.get(IniTokenTypes.SECTION)),
                 new AttributesDescriptor("Comment", m.get(IniTokenTypes.COMMENT)),
                 new AttributesDescriptor("Equal", m.get(IniTokenTypes.EQUAL))

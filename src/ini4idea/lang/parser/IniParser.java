@@ -54,14 +54,14 @@ public class IniParser implements PsiParser {
             return true;
         }
 
-        if (builder.getTokenType() != IniTokenTypes.STRING) {
+        if (builder.getTokenType() != IniTokenTypes.KEY_CHARACTERS) {
             return false;
         }
 
         PsiBuilder.Marker assign = builder.mark();
 
         PsiBuilder.Marker lval = builder.mark();
-        while (parseString(builder)) {
+        while (parseKey(builder)) {
         }
         lval.done(IniTokenTypes.LVAL);
 
@@ -73,7 +73,7 @@ public class IniParser implements PsiParser {
         builder.advanceLexer();
 
         PsiBuilder.Marker rval = builder.mark();
-        while (parseString(builder)) {
+        while (parseValue(builder)) {
         }
         rval.done(IniTokenTypes.RVAL);
 
@@ -85,15 +85,29 @@ public class IniParser implements PsiParser {
         return true;
     }
 
-    private boolean parseString(PsiBuilder builder) {
-        if (builder.getTokenType() != IniTokenTypes.STRING) {
+    private boolean parseKey(PsiBuilder builder) {
+        if (builder.getTokenType() != IniTokenTypes.KEY_CHARACTERS) {
             return false;
         }
 
         PsiBuilder.Marker str = builder.mark();
         builder.advanceLexer();
-        str.done(IniTokenTypes.STRING);
+        str.done(IniTokenTypes.KEY_CHARACTERS);
 
         return true;
     }
+
+    private boolean parseValue(PsiBuilder builder) {
+        if (builder.getTokenType() != IniTokenTypes.VALUE_CHARACTERS) {
+            return false;
+        }
+
+        PsiBuilder.Marker str = builder.mark();
+        builder.advanceLexer();
+        str.done(IniTokenTypes.VALUE_CHARACTERS);
+
+        return true;
+    }
+
+
 }

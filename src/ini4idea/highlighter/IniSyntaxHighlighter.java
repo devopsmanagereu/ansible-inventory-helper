@@ -31,8 +31,11 @@ public class IniSyntaxHighlighter extends SyntaxHighlighterBase {
                 TextAttributesKey.createTextAttributesKey("INI.SECTION", SyntaxHighlighterColors.KEYWORD.getDefaultAttributes()),
                 IniTokenTypes.SECTION);
         fillMap(ATTRIBUTES,
+                TextAttributesKey.createTextAttributesKey("INI.KEY", SyntaxHighlighterColors.STRING.getDefaultAttributes()),
+                IniTokenTypes.KEY_CHARACTERS);
+        fillMap(ATTRIBUTES,
                 TextAttributesKey.createTextAttributesKey("INI.VALUE", SyntaxHighlighterColors.STRING.getDefaultAttributes()),
-                IniTokenTypes.STRING);
+                IniTokenTypes.VALUE_CHARACTERS);
         fillMap(ATTRIBUTES,
                 TextAttributesKey.createTextAttributesKey("INI.EQUALS", SyntaxHighlighterColors.OPERATION_SIGN.getDefaultAttributes()),
                 IniTokenTypes.EQUAL);
