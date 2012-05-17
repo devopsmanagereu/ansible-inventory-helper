@@ -23,7 +23,7 @@ public class IniSectionBlock extends IniBlock {
         for (ASTNode node : getNode().getChildren(null)) {
             if (node.getElementType() == IniTokenTypes.ASSIGN) {
                 result.add(new IniAssignBlock(node));
-            } else if (node.getElementType() != IniTokenTypes.STRING) {
+            } else if (node.getElementType() != IniTokenTypes.LVAL && node.getElementType() != IniTokenTypes.RVAL) {
                 result.add(new IniLeafBlock(node));
             }
 
@@ -49,6 +49,7 @@ public class IniSectionBlock extends IniBlock {
         } else {
             return result;
         }
+//        return result;
     }
 
     @Override

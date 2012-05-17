@@ -24,18 +24,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e973eb1-f66b-4c78-a339-37a921e1038e" name="Default" comment="Added separate key and value styles">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recources/icons/directive.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recources/icons/list_of_directives.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ini4idea/IniIcons.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testSrc/ini4idea/IniFormatterTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ini4idea.iml" afterPath="$PROJECT_DIR$/ini4idea.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex" afterPath="$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/lexer/_IniLexer.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/lexer/_IniLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java" afterPath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java" />
     </list>
     <ignored path="ini4idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -958,7 +953,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added separate key and value styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified icons" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -975,6 +970,7 @@
     <MESSAGE value="Modified formatter to preserve blank line between comment and section" />
     <MESSAGE value="Added resolve and find usages features" />
     <MESSAGE value="Added separate key and value styles" />
+    <MESSAGE value="Modified icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

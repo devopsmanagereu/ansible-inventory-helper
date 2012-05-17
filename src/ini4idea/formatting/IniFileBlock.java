@@ -41,7 +41,7 @@ public class IniFileBlock extends IniBlock {
         if (block1.getNode().getElementType() == IniTokenTypes.COMMENT && block2.getNode().getElementType() == IniTokenTypes.SECTION) {
             return Spacing.createSpacing(0, 0, 2, false, 10);
         }
-        return Spacing.createSpacing(0, 0, 1, true, 0);
+        return Spacing.createSpacing(0, 0, 1, false, 0);
     }
 
     @NotNull
