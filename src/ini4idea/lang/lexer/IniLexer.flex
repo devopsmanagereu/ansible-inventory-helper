@@ -24,7 +24,7 @@ EZCOMMENT=#{COMMENTCONTENT}
 ZENDCOMMENT=;{COMMENTCONTENT}
 COMMENT={EZCOMMENT} | {ZENDCOMMENT}
 
-VALUE_CHARACTER=[^\n\r\f\t\=\ ]+
+VALUE_CHARACTER=[^\n\r\f\t\=\ ][^\n\r\f\t\=]*{EOL}?
 KEY_CHARACTER=\".*\" | [^\n\r\f\ \t\=]+
 
 WHITESPACE=[\ \t\f]+

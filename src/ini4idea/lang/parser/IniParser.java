@@ -80,7 +80,7 @@ public class IniParser implements PsiParser {
         assign.done(IniTokenTypes.ASSIGN);
 
         // TODO assert builder.getTokenType() == IniTokenTypes.EOL
-        builder.advanceLexer();
+//        builder.advanceLexer();
 
         return true;
     }

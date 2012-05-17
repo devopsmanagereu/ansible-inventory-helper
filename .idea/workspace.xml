@@ -25,12 +25,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3e973eb1-f66b-4c78-a339-37a921e1038e" name="Default" comment="Added separate key and value styles">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testSrc/ini4idea/IniFormatterTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testSrc/ini4idea/testData/formatter.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testSrc/ini4idea/testData/formatter_after.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex" afterPath="$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/lexer/_IniLexer.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/lexer/_IniLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testSrc/ini4idea/IniLexerTest.java" afterPath="$PROJECT_DIR$/testSrc/ini4idea/IniLexerTest.java" />
     </list>
     <ignored path="ini4idea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,55 +89,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IniAnnotator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IniAnnotator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ini4idea/IniAnnotator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="120" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.9113924">
+            <state line="43" column="120" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IniLeafBlock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java">
+      <file leaf-file-name="IniParser.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="16" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="-1.113924">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IniFileBlock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java">
+      <file leaf-file-name="PsiBuilderImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/IDEA/community/platform/core-impl/src/com/intellij/lang/impl/PsiBuilderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="51" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IniSectionBlock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="11" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IniStructureViewElement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="31" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IniAssignBlock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ini4idea/formatting/IniAssignBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
+            <state line="675" column="0" selection-start="20574" selection-end="20574" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,41 +119,62 @@
       <file leaf-file-name="IniLexer.flex" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="30" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+            <state line="26" column="51" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IniFoldingBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ini4idea/folding/IniFoldingBuilder.java">
+      <file leaf-file-name="IniStructureViewElement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="49" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+            <state line="69" column="0" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeywordParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/IDEA/community/platform/lang-impl/src/com/intellij/ide/highlighter/custom/tokens/KeywordParser.java">
+      <file leaf-file-name="IniFormatterTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testSrc/ini4idea/IniFormatterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="11" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.0">
+            <state line="33" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InitialInfoBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/IDEA/community/platform/lang-impl/src/com/intellij/formatting/InitialInfoBuilder.java">
+      <file leaf-file-name="formatter_after.ini" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testSrc/ini4idea/testData/formatter_after.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="215" column="0" selection-start="9458" selection-end="9458" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#18770#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1881#1910#0" expanded="false" />
-                <element signature="e#2297#2304#0" expanded="false" />
-                <element signature="e#16918#16940#0" expanded="false" />
-              </folding>
+            <state line="3" column="1" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IdeaPluginDescriptorImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/IDEA/community/platform/platform-impl/src/com/intellij/ide/plugins/IdeaPluginDescriptorImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="501" column="0" selection-start="15339" selection-end="15339" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IniLexerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testSrc/ini4idea/IniLexerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="16" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IniIcons.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ini4idea/IniIcons.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="17" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,22 +192,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
-        <option value="$PROJECT_DIR$/src/ini4idea/highlighter/IniColorSettingsPage.java" />
-        <option value="$PROJECT_DIR$/src/ini4idea/highlighter/IniSyntaxHighlighter.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/lang/lexer/_IniLexer.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/lang/psi/IniSectionImpl.java" />
-        <option value="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/lang/IniTokenTypes.java" />
-        <option value="$PROJECT_DIR$/testSrc/ini4idea/IniFormatterTest.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/IniIcons.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/IniAnnotator.java" />
-        <option value="$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex" />
         <option value="$PROJECT_DIR$/src/ini4idea/folding/IniFoldingBuilder.java" />
         <option value="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java" />
+        <option value="$PROJECT_DIR$/testSrc/ini4idea/testData/formatter.ini" />
+        <option value="$PROJECT_DIR$/testSrc/ini4idea/testData/formatter_after.ini" />
+        <option value="$PROJECT_DIR$/testSrc/ini4idea/IniLexerTest.java" />
+        <option value="$PROJECT_DIR$/testSrc/ini4idea/IniFormatterTest.java" />
+        <option value="$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex" />
+        <option value="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java" />
       </list>
     </option>
   </component>
@@ -298,146 +293,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ini4idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; IDEA IC-117.117 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; IDEA IC-117.117 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; IDEA IC-117.117 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intellij" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; IDEA IC-117.117 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idea.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intellij" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; IDEA IC-117.117 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; IDEA IC-117.117 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; IDEA IC-117.117 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -526,7 +381,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="structureView" />
+              <option name="myItemId" value="lang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -549,6 +404,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="psi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ini4idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ini4idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ini4idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -575,46 +460,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lexer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formatting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ini4idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -902,8 +747,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297244" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26414087" sideWeight="0.30610237" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26414087" sideWeight="0.35728347" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26414087" sideWeight="0.22440945" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26414087" sideWeight="0.43897638" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874015" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -953,7 +798,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in formatter - extra spaces were added to value characters" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -971,6 +816,7 @@
     <MESSAGE value="Added resolve and find usages features" />
     <MESSAGE value="Added separate key and value styles" />
     <MESSAGE value="Modified icons" />
+    <MESSAGE value="Fixed bug in formatter - extra spaces were added to value characters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -980,48 +826,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ini4idea/IniIcons.java">
+    <entry file="file://$PROJECT_DIR$/src/ini4idea/folding/IniFoldingBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="75" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://C:/IDEA/community/platform/platform-api/src/com/intellij/ide/projectView/PresentationData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="0" selection-start="5375" selection-end="5375" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://C:/IDEA/community/platform/util/src/com/intellij/openapi/util/IconLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="21" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ini4idea/IniLanguage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="115" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://C:/IDEA/community/platform/core-api/src/com/intellij/util/PlatformIcons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="35" selection-start="2210" selection-end="2210" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ini4idea/formatting/IniFormattingModelBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+        <state line="22" column="49" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/IDEA/community/platform/lang-impl/src/com/intellij/formatting/InitialInfoBuilder.java">
+    <entry file="file://C:/IDEA/community/platform/lang-impl/src/com/intellij/ide/highlighter/custom/tokens/KeywordParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="0" selection-start="9458" selection-end="9458" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#18770#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1881#1910#0" expanded="false" />
-            <element signature="e#2297#2304#0" expanded="false" />
-            <element signature="e#16918#16940#0" expanded="false" />
-          </folding>
+        <state line="94" column="11" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,51 +854,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="11" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ini4idea/formatting/IniAssignBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
+        <state line="34" column="123" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex">
+    <entry file="file://$PROJECT_DIR$/testSrc/ini4idea/testData/formatter.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+        <state line="3" column="3" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ini4idea/folding/IniFoldingBuilder.java">
+    <entry file="file://$PROJECT_DIR$/testSrc/ini4idea/testData/formatter_after.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="49" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+        <state line="3" column="1" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/IDEA/community/platform/lang-impl/src/com/intellij/ide/highlighter/custom/tokens/KeywordParser.java">
+    <entry file="file://C:/IDEA/community/platform/platform-impl/src/com/intellij/ide/plugins/IdeaPluginDescriptorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="11" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.0">
+        <state line="501" column="0" selection-start="15339" selection-end="15339" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java">
+    <entry file="file://$PROJECT_DIR$/src/ini4idea/IniIcons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="31" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
+        <state line="9" column="17" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testSrc/ini4idea/IniLexerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="16" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testSrc/ini4idea/IniFormatterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ini4idea/IniAnnotator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="120" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.9113924">
+        <state line="43" column="120" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ini4idea/lang/lexer/IniLexer.flex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="51" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/IDEA/community/platform/core-impl/src/com/intellij/lang/impl/PsiBuilderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="675" column="0" selection-start="20574" selection-end="20574" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="-1.113924">
           <folding />
         </state>
       </provider>
