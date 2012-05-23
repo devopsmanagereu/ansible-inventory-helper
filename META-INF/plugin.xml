@@ -1,6 +1,6 @@
 <idea-plugin version="2">
     <name>Ini4Idea</name>
-    <version>0.8</version>
+    <version>0.9</version>
     <vendor>Alexei Vasin</vendor>
     <idea-version since-build="112.0"/>
 
@@ -23,6 +23,11 @@
         <lang.psiStructureViewFactory language="Ini"
                                       implementationClass="ini4idea.structureView.IniStructureViewFactory"/>
         <lang.namesValidator language="Ini" implementationClass="ini4idea.lang.IniValidator"/>
+        <fileBasedIndex implementation="ini4idea.ide.IniIndex"/>
+        <gotoSymbolContributor implementation="ini4idea.ide.IniContributor"/>
+        <!--<stubElementTypeHolder class="ini4idea.IniElementTypes"/>
+        <stubIndex implementation="ini4idea.lang.psi.DirectiveKeyIndex"/>-->
+
         <!--<renameHandler implementation="ini4idea.lang.refactoring.IniRenameHandler"/>-->
     </extensions>
 

@@ -7,7 +7,6 @@ import com.intellij.openapi.util.Iconable;
 import com.intellij.pom.Navigatable;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
-import com.intellij.util.PlatformIcons;
 import ini4idea.IniIcons;
 import ini4idea.lang.IniTokenTypes;
 
@@ -82,9 +81,12 @@ public class IniStructureViewElement implements StructureViewTreeElement {
             public Icon getIcon(boolean open) {
                 //
                 if (isSection(myElement)) {
-                    return PlatformIcons.ADD_ICON;
+//                    return PlatformIcons.ADD_ICON;
+                    return IniIcons.sectionIcon;
                 } else if (isDirective(myElement)) {
-                    return IniIcons.directiveIcon;
+//                    return IniIcons.directiveIcon;
+//                    return IniIcons.sectionIcon;
+                    return null;
                 } else {
                     return myElement.getIcon(Iconable.ICON_FLAG_OPEN);
                 }
