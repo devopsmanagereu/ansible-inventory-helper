@@ -7,6 +7,7 @@ import com.intellij.openapi.util.Iconable;
 import com.intellij.pom.Navigatable;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
+import ini4idea.IniElementTypes;
 import ini4idea.IniIcons;
 import ini4idea.lang.IniTokenTypes;
 
@@ -50,7 +51,7 @@ public class IniStructureViewElement implements StructureViewTreeElement {
     }
 
     public boolean isDirective(PsiElement e) {
-        return e.getNode().getElementType() == IniTokenTypes.ASSIGN;
+        return e.getNode().getElementType() == IniElementTypes.DIRECTIVE;
     }
 
 

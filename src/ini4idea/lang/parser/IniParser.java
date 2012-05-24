@@ -4,6 +4,7 @@ import com.intellij.lang.ASTNode;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiParser;
 import com.intellij.psi.tree.IElementType;
+import ini4idea.IniElementTypes;
 import ini4idea.lang.IniTokenTypes;
 import org.jetbrains.annotations.NotNull;
 
@@ -77,7 +78,8 @@ public class IniParser implements PsiParser {
         }
         rval.done(IniTokenTypes.RVAL);
 
-        assign.done(IniTokenTypes.ASSIGN);
+//        assign.done(IniTokenTypes.ASSIGN);
+        assign.done(IniElementTypes.DIRECTIVE);
 
         // TODO assert builder.getTokenType() == IniTokenTypes.EOL
 //        builder.advanceLexer();

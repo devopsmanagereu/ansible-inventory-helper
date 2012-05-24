@@ -38,6 +38,7 @@ public class IniParserDefinition implements ParserDefinition {
     @Override
     public IFileElementType getFileNodeType() {
         return INI_FILE_ELEMENT_TYPE;
+//        return IniElementTypes.FILE;
     }
 
     @NotNull
