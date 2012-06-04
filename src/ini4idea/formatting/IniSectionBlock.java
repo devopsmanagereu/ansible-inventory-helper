@@ -3,6 +3,7 @@ package ini4idea.formatting;
 import com.intellij.formatting.*;
 import com.intellij.lang.ASTNode;
 import ini4idea.lang.IniTokenTypes;
+import ini4idea.lang.psi.stubs.DirectiveStubElementType;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -21,15 +22,11 @@ public class IniSectionBlock extends IniBlock {
     public List<Block> getSubBlocks() {
         List<Block> result = new ArrayList<Block>();
         for (ASTNode node : getNode().getChildren(null)) {
-            if (node.getElementType() == IniTokenTypes.ASSIGN) {
+            if (node.getElementType() instanceof DirectiveStubElementType) {
                 result.add(new IniAssignBlock(node));
             } else if (node.getElementType() != IniTokenTypes.LVAL && node.getElementType() != IniTokenTypes.RVAL) {
                 result.add(new IniLeafBlock(node));
             }
-
-            /*if (node.getElementType() != IniTokenTypes.WHITESPACE && node.getElementType() != IniTokenTypes.EOL){
-              result.add(new IniLeafBlock(node));
-            }*/
 
         }
 
