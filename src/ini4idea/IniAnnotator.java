@@ -4,9 +4,10 @@ import com.intellij.lang.annotation.AnnotationHolder;
 import com.intellij.lang.annotation.Annotator;
 import com.intellij.psi.PsiElement;
 import com.intellij.util.containers.hash.HashSet;
-import ini4idea.lang.psi.IniAssign;
 import ini4idea.lang.psi.IniFile;
+import ini4idea.lang.psi.IniKeyImpl;
 import ini4idea.lang.psi.IniSectionImpl;
+import ini4idea.lang.psi.stubs.DirectiveImpl;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
@@ -40,7 +41,7 @@ public class IniAnnotator implements Annotator {
                     Set<String> s = new HashSet<String>();
 
                     for (PsiElement sectionElement : sectionChildren) {
-                        if (sectionElement instanceof IniAssign) {
+                        if (sectionElement instanceof IniKeyImpl || sectionElement instanceof DirectiveImpl) {
                             PsiElement e = sectionElement.getFirstChild();
 
                             assert e != null;
