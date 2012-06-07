@@ -18,7 +18,7 @@ public class IniParser implements PsiParser {
     @NotNull
     @Override
     public ASTNode parse(IElementType root, PsiBuilder builder) {
-        //builder.setDebugMode(true); // TODO remove
+        // TODO modify parser to include single key character into section, not full directive
         PsiBuilder.Marker rootMarker = builder.mark();
         while (parseSection(builder)) {
         }
@@ -67,8 +67,11 @@ public class IniParser implements PsiParser {
         lval.done(IniTokenTypes.LVAL);
 
         if (builder.getTokenType() != IniTokenTypes.EQUAL) {
+            /*assign.drop();
+            return false;*/
             assign.drop();
-            return false;
+            builder.advanceLexer();
+            return true;
         }
 
         builder.advanceLexer();
@@ -100,6 +103,13 @@ public class IniParser implements PsiParser {
     }
 
     private boolean parseValue(PsiBuilder builder) {
+/*
+        if (builder.getTokenType() == IniTokenTypes.EOL){
+            builder.advanceLexer();
+            return false;
+        }
+*/
+
         if (builder.getTokenType() != IniTokenTypes.VALUE_CHARACTERS) {
             return false;
         }

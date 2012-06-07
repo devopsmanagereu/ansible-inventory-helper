@@ -25,7 +25,7 @@ ZENDCOMMENT=;{COMMENTCONTENT}
 COMMENT={EZCOMMENT} | {ZENDCOMMENT}
 
 VALUE_CHARACTER=[^\n\r\f\t\=\ ][^\n\r\f\t\=]*{EOL}?
-KEY_CHARACTER=\".*\" | [^\n\r\f\ \t\=]+
+KEY_CHARACTER=[^\n\r\f\ \t\=]+
 
 WHITESPACE=[\ \t\f]+
 SECTION=\[[^\]]+\]
@@ -36,13 +36,20 @@ EQUAL=\=
 
 %%
 
-{EOL}        { return IniTokenTypes.EOL; }
+//{EOL}        { return IniTokenTypes.EOL; }
 {COMMENT}    { return IniTokenTypes.COMMENT; }
 {WHITESPACE} { return IniTokenTypes.WHITESPACE; }
 {SECTION}    { return IniTokenTypes.SECTION; }
 
-<YYINITIAL> {KEY_CHARACTER}+             { yybegin(IN_KEY_VALUE_SEPARATOR); return IniTokenTypes.KEY_CHARACTERS; }
-<IN_KEY_VALUE_SEPARATOR> {EQUAL} { yybegin(IN_VALUE); return IniTokenTypes.EQUAL; }
-<IN_VALUE> {VALUE_CHARACTER}            { yybegin(YYINITIAL); return IniTokenTypes.VALUE_CHARACTERS; }
+<YYINITIAL> {
+                {KEY_CHARACTER}             { yybegin(IN_KEY_VALUE_SEPARATOR); return IniTokenTypes.KEY_CHARACTERS; }
+                {EOL}+ { return IniTokenTypes.EOL; }
+             }
+<IN_KEY_VALUE_SEPARATOR> {  {EQUAL} { yybegin(IN_VALUE); return IniTokenTypes.EQUAL; }
+                            {EOL} { yybegin(YYINITIAL); return IniTokenTypes.EOL; }
+                          }
+<IN_VALUE> {    {EOL} { yybegin(YYINITIAL); return IniTokenTypes.EOL; }
+                {VALUE_CHARACTER}            { yybegin(YYINITIAL); return IniTokenTypes.VALUE_CHARACTERS; }
+            }
 
 .            { return IniTokenTypes.BAD_CHARACTER; }
