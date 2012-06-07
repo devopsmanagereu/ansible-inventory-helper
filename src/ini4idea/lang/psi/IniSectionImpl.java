@@ -32,7 +32,7 @@ public class IniSectionImpl extends ASTWrapperPsiElement implements IniSection {
 
     @Override
     public PsiReference getReference() {
-        return new IniSimpleReference(this);
+        return new IniSectionReference(this);
     }
 
     @Override

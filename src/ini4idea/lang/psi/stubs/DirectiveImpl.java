@@ -44,7 +44,11 @@ public class DirectiveImpl extends DirectiveStubElementImpl<DirectiveStub> imple
         return new ItemPresentation() {
             @Override
             public String getPresentableText() {
-                return myNode.getText();
+                if (myNode != null) {
+                    return myNode.getText();
+                } else {
+                    return null;
+                }
             }
 
             @Override

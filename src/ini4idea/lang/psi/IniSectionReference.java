@@ -1,24 +1,24 @@
 package ini4idea.lang.psi;
 
+import com.intellij.codeInsight.lookup.LookupElement;
+import com.intellij.codeInsight.lookup.LookupElementBuilder;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiReference;
 import com.intellij.psi.search.PsiElementProcessor;
 import com.intellij.psi.util.PsiElementFilter;
 import com.intellij.psi.util.PsiTreeUtil;
-import com.intellij.util.ArrayUtil;
 import com.intellij.util.IncorrectOperationException;
 import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Alexei Vasin
  */
-public class IniSimpleReference implements PsiReference {
-//    private final Logger LOG = Logger.getInstance("#com.intellij.ini4idea.lang.psi");
+public class IniSectionReference implements PsiReference {
 
     private IniSectionImpl mySection;
 
-    public IniSimpleReference(IniSectionImpl section) {
+    public IniSectionReference(IniSectionImpl section) {
         mySection = section;
     }
 
@@ -29,7 +29,9 @@ public class IniSimpleReference implements PsiReference {
 
     @Override
     public TextRange getRangeInElement() {
-        return new TextRange(0, mySection.getTextLength());
+        PsiElement child = mySection.getFirstChild();
+        assert child != null;
+        return new TextRange(0, child.getTextLength());
     }
 
 
@@ -101,7 +103,12 @@ public class IniSimpleReference implements PsiReference {
     @NotNull
     @Override
     public Object[] getVariants() {
-        return ArrayUtil.EMPTY_OBJECT_ARRAY;
+        LookupElement result[] = new LookupElement[2];
+        result[0] = LookupElementBuilder.create("[abc");
+        result[1] = LookupElementBuilder.create("[def");
+        return result;
+
+//        return ArrayUtil.EMPTY_OBJECT_ARRAY;
     }
 
     @Override

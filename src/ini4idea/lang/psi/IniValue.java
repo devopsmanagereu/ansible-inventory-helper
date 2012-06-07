@@ -17,6 +17,10 @@ public class IniValue extends ASTWrapperPsiElement {
         myNode = node;
     }
 
+    public String getName() {
+        return myNode.getText();
+    }
+
     @Override
     public ItemPresentation getPresentation() {
         return new ItemPresentation() {

@@ -27,6 +27,8 @@
         <gotoSymbolContributor implementation="ini4idea.ide.IniGoToSymbolContributor"/>
         <stubElementTypeHolder class="ini4idea.IniElementTypes"/>
         <stubIndex implementation="ini4idea.lang.psi.DirectiveKeyIndex"/>
+        <!--<completion.contributor language="Ini" id="Inidirective"
+                                implementationClass="ini4idea.completion.IniCompletionContributor"/>-->
 
         <!--<renameHandler implementation="ini4idea.lang.refactoring.IniRenameHandler"/>-->
     </extensions>

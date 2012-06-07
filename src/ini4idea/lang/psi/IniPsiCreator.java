@@ -24,7 +24,7 @@ public class IniPsiCreator {
         } else if (astNodeType == IniTokenTypes.ASSIGN) {
             return new IniAssign(node);
         } else if (astNodeType == IniTokenTypes.LVAL) {
-            return new IniValue(node);
+            return new IniKeyImpl(node);
         } else if (astNodeType == IniTokenTypes.RVAL) {
             return new IniValue(node);
         }
