@@ -40,33 +40,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/IniAnnotator.java" afterPath="$PROJECT_DIR$/src/ini4idea/IniAnnotator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniAssignBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniAssignBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniFileBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniFormattingModelBuilder.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniFormattingModelBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniLeafBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java" afterPath="$PROJECT_DIR$/src/ini4idea/formatting/IniSectionBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/highlighter/IniColorSettingsPage.java" afterPath="$PROJECT_DIR$/src/ini4idea/highlighter/IniColorSettingsPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/highlighter/IniSyntaxHighlighter.java" afterPath="$PROJECT_DIR$/src/ini4idea/highlighter/IniSyntaxHighlighter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/ide/IniContributor.java" afterPath="$PROJECT_DIR$/src/ini4idea/ide/IniContributor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/ide/IniGoToSymbolContributor.java" afterPath="$PROJECT_DIR$/src/ini4idea/ide/IniGoToSymbolContributor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/ide/IniIndex.java" afterPath="$PROJECT_DIR$/src/ini4idea/ide/IniIndex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/lexer/_IniLexer.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/lexer/_IniLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniElementType.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniElementType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParserDefinition.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/parser/IniParserDefinition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniDirectiveIndex.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniDirectiveIndex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniFile.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniKeyReference.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniKeyReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniPsiCreator.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniPsiCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniSectionImpl.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniSectionImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniSectionReference.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/IniSectionReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/Directive.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/Directive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/DirectiveImpl.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/DirectiveImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/DirectiveStubElementImpl.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/DirectiveStubElementImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/DirectiveStubElementType.java" afterPath="$PROJECT_DIR$/src/ini4idea/lang/psi/stubs/DirectiveStubElementType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewComponent.java" afterPath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java" afterPath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewModel.java" afterPath="$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testSrc/ini4idea/IniLexerTest.java" afterPath="$PROJECT_DIR$/testSrc/ini4idea/IniLexerTest.java" />
     </list>
     <ignored path="ini4idea.iws" />
@@ -159,7 +132,7 @@
       <file leaf-file-name="IniStructureViewElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="24" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.0">
+            <state line="75" column="24" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -772,7 +745,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed annotator after changing PSI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified NotNull annotations" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -798,6 +771,7 @@
     <MESSAGE value="Modified lexer to handle empty strings in assignment" />
     <MESSAGE value="Added completion in directives" />
     <MESSAGE value="Fixed annotator after changing PSI" />
+    <MESSAGE value="Modified NotNull annotations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -922,7 +896,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ini4idea/structureView/IniStructureViewElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="24" selection-start="2216" selection-end="2216" vertical-scroll-proportion="0.0">
+        <state line="75" column="24" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

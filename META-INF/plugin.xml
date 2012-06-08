@@ -1,6 +1,7 @@
 <idea-plugin version="2">
     <name>Ini4Idea</name>
-    <version>0.9</version>
+    <change-notes>Completion for directives</change-notes>
+    <version>0.9.1</version>
     <vendor>Alexei Vasin</vendor>
     <idea-version since-build="112.0"/>
 
@@ -31,6 +32,12 @@
                                 implementationClass="ini4idea.completion.IniCompletionContributor"/>-->
 
         <!--<renameHandler implementation="ini4idea.lang.refactoring.IniRenameHandler"/>-->
+
+        <localInspection language="Ini" shortName="DuplicateSectionInFile" bundle="ini4idea.IniBundle"
+                         key="ini.duplicate.section.inspection.display.name"
+                         groupKey="ini.files.inspection.group.display.name"
+                         enabledByDefault="true" level="WARNING"
+                         implementationClass="ini4idea.DuplicateSectionInspection"/>
     </extensions>
 
 </idea-plugin>
