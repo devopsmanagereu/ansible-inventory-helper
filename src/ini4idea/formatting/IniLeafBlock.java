@@ -11,7 +11,7 @@ import java.util.List;
  * @author Alexei Vasin
  */
 public class IniLeafBlock extends IniBlock {
-    public IniLeafBlock(ASTNode node) {
+    public IniLeafBlock(@NotNull ASTNode node) {
         super(node, Indent.getAbsoluteNoneIndent());
     }
 

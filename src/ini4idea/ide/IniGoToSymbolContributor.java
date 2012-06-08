@@ -19,7 +19,7 @@ public class IniGoToSymbolContributor implements ChooseByNameContributor {
 
     @NotNull
     @Override
-    public String[] getNames(Project project, boolean includeNonProjectItems) {
+    public String[] getNames(@NotNull Project project, boolean includeNonProjectItems) {
         final ArrayList<String> names = new ArrayList<String>();
         names.addAll(StubIndex.getInstance().getAllKeys(DirectiveKeyIndex.KEY, project));
         return ArrayUtil.toStringArray(names);
@@ -27,7 +27,7 @@ public class IniGoToSymbolContributor implements ChooseByNameContributor {
 
     @NotNull
     @Override
-    public NavigationItem[] getItemsByName(String name, String pattern, Project project, boolean includeNonProjectItems) {
+    public NavigationItem[] getItemsByName(@NotNull String name, String pattern, @NotNull Project project, boolean includeNonProjectItems) {
         final ArrayList<PsiElement> items = new ArrayList<PsiElement>();
         items.addAll(StubIndex.getInstance().get(DirectiveKeyIndex.KEY, name, project, GlobalSearchScope.allScope(project)));
         return items.toArray(new NavigationItem[items.size()]);

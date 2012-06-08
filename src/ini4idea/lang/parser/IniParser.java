@@ -17,7 +17,7 @@ public class IniParser implements PsiParser {
 
     @NotNull
     @Override
-    public ASTNode parse(IElementType root, PsiBuilder builder) {
+    public ASTNode parse(IElementType root, @NotNull PsiBuilder builder) {
         // TODO modify parser to include single key character into section, not full directive
         PsiBuilder.Marker rootMarker = builder.mark();
         while (parseSection(builder)) {
@@ -30,7 +30,7 @@ public class IniParser implements PsiParser {
      * @param builder Psi builder
      * @return false if EOF was reached
      */
-    private boolean parseSection(PsiBuilder builder) {
+    private boolean parseSection(@NotNull PsiBuilder builder) {
         if (builder.eof()) {
             return false;
         }
@@ -49,7 +49,7 @@ public class IniParser implements PsiParser {
         return true;
     }
 
-    private boolean parseAssign(PsiBuilder builder) {
+    private boolean parseAssign(@NotNull PsiBuilder builder) {
         if (builder.getTokenType() == IniTokenTypes.EOL) {
             builder.advanceLexer();
             return true;
@@ -90,7 +90,7 @@ public class IniParser implements PsiParser {
         return true;
     }
 
-    private boolean parseKey(PsiBuilder builder) {
+    private boolean parseKey(@NotNull PsiBuilder builder) {
         if (builder.getTokenType() != IniTokenTypes.KEY_CHARACTERS) {
             return false;
         }
@@ -102,7 +102,7 @@ public class IniParser implements PsiParser {
         return true;
     }
 
-    private boolean parseValue(PsiBuilder builder) {
+    private boolean parseValue(@NotNull PsiBuilder builder) {
 /*
         if (builder.getTokenType() == IniTokenTypes.EOL){
             builder.advanceLexer();

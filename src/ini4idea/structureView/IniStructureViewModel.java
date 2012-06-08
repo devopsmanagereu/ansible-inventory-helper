@@ -14,15 +14,13 @@ import org.jetbrains.annotations.NotNull;
  * @author Alexei Vasin
  */
 public class IniStructureViewModel extends TextEditorBasedStructureViewModel implements StructureViewModel.ExpandInfoProvider, StructureViewModel.ElementInfoProvider {
+    @NotNull
     private final IniFile myIniFile;
     private Filter[] myFilters = new Filter[]{new IniSectionsFilter()};
 
+    @NotNull
     public Sorter[] getSorters() {
         return mySorters;
-    }
-
-    public void setSorters(Sorter[] sorters) {
-        mySorters = sorters;
     }
 
     public boolean shouldEnterElement(final Object element) {
@@ -53,12 +51,8 @@ public class IniStructureViewModel extends TextEditorBasedStructureViewModel imp
         return myFilters;
     }
 
-    public void setFilters(Filter[] filters) {
-        myFilters = filters;
-    }
-
     @Override
-    public boolean isAutoExpand(StructureViewTreeElement element) {
+    public boolean isAutoExpand(@NotNull StructureViewTreeElement element) {
         PsiElement e = (PsiElement) element.getValue();
         if (e.getNode().getElementType() == IniTokenTypes.SECTION) {
             return false;
@@ -77,7 +71,7 @@ public class IniStructureViewModel extends TextEditorBasedStructureViewModel imp
     }
 
     @Override
-    public boolean isAlwaysLeaf(StructureViewTreeElement element) {
+    public boolean isAlwaysLeaf(@NotNull StructureViewTreeElement element) {
         PsiElement e = (PsiElement) element.getValue();
         if (e.getNode().getElementType() == IniTokenTypes.ASSIGN) {
             return true;

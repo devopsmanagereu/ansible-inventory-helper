@@ -21,10 +21,11 @@ public class DirectiveImpl extends DirectiveStubElementImpl<DirectiveStub> imple
         myNode = node;
     }
 
-    public DirectiveImpl(final DirectiveStub stub, final IStubElementType nodeType) {
+    public DirectiveImpl(@NotNull final DirectiveStub stub, @NotNull final IStubElementType nodeType) {
         super(stub, nodeType);
     }
 
+    @NotNull
     @Override
     public PsiElement setName(@NonNls @NotNull String name) throws IncorrectOperationException {
         return this.setName(name);

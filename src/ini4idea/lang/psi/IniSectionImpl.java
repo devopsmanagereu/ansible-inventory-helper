@@ -35,6 +35,7 @@ public class IniSectionImpl extends ASTWrapperPsiElement implements IniSection {
         return new IniSectionReference(this);
     }
 
+    @NotNull
     @Override
     public PsiElement setName(@NonNls @NotNull final String name) throws IncorrectOperationException {
         IniSectionImpl section = (IniSectionImpl) IniElementFactory.createSection(getProject(), name);

@@ -12,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Alexei Vasin
  */
 public class IniKeyReference implements PsiReference {
+    @NotNull
     String directives[] = {"allow_call_time_pass_reference",
             "allow_url_fopen",
             "allow_url_include",
@@ -371,6 +372,7 @@ public class IniKeyReference implements PsiReference {
         return myKey;
     }
 
+    @NotNull
     @Override
     public TextRange getRangeInElement() {
         return new TextRange(0, myKey.getTextLength());

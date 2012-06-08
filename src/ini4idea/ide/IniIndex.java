@@ -35,7 +35,7 @@ public class IniIndex extends ScalarIndexExtension<String> {
     private final EnumeratorStringDescriptor myKeyDescriptor = new EnumeratorStringDescriptor();
     private final FileBasedIndex.InputFilter myInputFilter = new FileBasedIndex.InputFilter() {
         @Override
-        public boolean acceptInput(VirtualFile file) {
+        public boolean acceptInput(@NotNull VirtualFile file) {
             return file.getFileType() == IniFileType.INSTANCE;
         }
     };
@@ -46,7 +46,7 @@ public class IniIndex extends ScalarIndexExtension<String> {
         return NAME;
     }
 
-    public static String getName(PsiElement element) {
+    public static String getName(@NotNull PsiElement element) {
         PsiElement child = element.getFirstChild();
         assert child != null;
         String name = child.getText();
@@ -64,7 +64,7 @@ public class IniIndex extends ScalarIndexExtension<String> {
         return new DataIndexer<String, Void, FileContent>() {
             @NotNull
             @Override
-            public Map<String, Void> map(FileContent inputData) {
+            public Map<String, Void> map(@NotNull FileContent inputData) {
                 String className;
                 Map<String, Void> result = new HashMap<String, Void>();
                 try {
@@ -83,16 +83,16 @@ public class IniIndex extends ScalarIndexExtension<String> {
         };
     }
 
-    public static void process(IniFile file, final Consumer<PsiElement> consumer) {
+    public static void process(@NotNull IniFile file, @NotNull final Consumer<PsiElement> consumer) {
         processChildrenRecursively(file, consumer);
     }
 
 
-    public static boolean isKeyNode(PsiElement element) {
+    public static boolean isKeyNode(@NotNull PsiElement element) {
         return (element instanceof IniValue && element.getNode().getElementType() == IniTokenTypes.LVAL);
     }
 
-    public static void processChildrenRecursively(PsiElement element, final Consumer<PsiElement> consumer) {
+    public static void processChildrenRecursively(@NotNull PsiElement element, @NotNull final Consumer<PsiElement> consumer) {
         PsiElement[] children = element.getChildren();
         if (children.length == 0) return;
         for (PsiElement child : children) {
@@ -104,7 +104,8 @@ public class IniIndex extends ScalarIndexExtension<String> {
 
     }
 
-    public static Collection<NavigationItem> getItemsByName(final String name, Project project) {
+    @NotNull
+    public static Collection<NavigationItem> getItemsByName(@NotNull final String name, @NotNull Project project) {
         Collection<VirtualFile> files = FileBasedIndex.getInstance().getContainingFiles(NAME, name, GlobalSearchScope.projectScope(project));
         final Collection<NavigationItem> result = new ArrayList<NavigationItem>();
         for (VirtualFile vFile : files) {
@@ -115,7 +116,7 @@ public class IniIndex extends ScalarIndexExtension<String> {
             }
             process((IniFile) file, new Consumer<PsiElement>() {
                 @Override
-                public void consume(PsiElement element) {
+                public void consume(@NotNull PsiElement element) {
                     if (getName(element).contains(name)) {
                         result.add((NavigationItem) element);
                     }
@@ -125,11 +126,13 @@ public class IniIndex extends ScalarIndexExtension<String> {
         return result;
     }
 
+    @NotNull
     @Override
     public KeyDescriptor<String> getKeyDescriptor() {
         return myKeyDescriptor;
     }
 
+    @NotNull
     @Override
     public FileBasedIndex.InputFilter getInputFilter() {
         return myInputFilter;
@@ -145,7 +148,8 @@ public class IniIndex extends ScalarIndexExtension<String> {
         return INDEX_VERSION;
     }
 
-    public static Collection<String> getSymbolNames(Project project) {
+    @NotNull
+    public static Collection<String> getSymbolNames(@NotNull Project project) {
         Collection<String> result = FileBasedIndex.getInstance().getAllKeys(NAME, project);
         return result;
     }

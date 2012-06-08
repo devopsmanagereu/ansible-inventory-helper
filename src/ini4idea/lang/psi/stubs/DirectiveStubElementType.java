@@ -22,34 +22,38 @@ public class DirectiveStubElementType extends IStubElementType<DirectiveStub, Di
     }
 */
 
+    @NotNull
     @Override
     public Directive createPsi(@NotNull DirectiveStub stub) {
         return new DirectiveImpl(stub, this);
     }
 
+    @NotNull
     @Override
     public DirectiveStub createStub(@NotNull Directive psi, StubElement parentStub) {
         return new DirectiveStubImpl(parentStub, psi.getKey());
     }
 
+    @NotNull
     @Override
     public String getExternalId() {
         return "ini.prop";
     }
 
     @Override
-    public void serialize(DirectiveStub stub, StubOutputStream dataStream) throws IOException {
+    public void serialize(@NotNull DirectiveStub stub, @NotNull StubOutputStream dataStream) throws IOException {
         dataStream.writeName(stub.getKey());
     }
 
+    @NotNull
     @Override
-    public DirectiveStub deserialize(StubInputStream dataStream, StubElement parentStub) throws IOException {
+    public DirectiveStub deserialize(@NotNull StubInputStream dataStream, StubElement parentStub) throws IOException {
         final StringRef ref = dataStream.readName();
         return new DirectiveStubImpl(parentStub, ref.getString());
     }
 
     @Override
-    public void indexStub(DirectiveStub stub, IndexSink sink) {
+    public void indexStub(@NotNull DirectiveStub stub, @NotNull IndexSink sink) {
         sink.occurrence(DirectiveKeyIndex.KEY, stub.getKey());
     }
 }

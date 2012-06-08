@@ -19,6 +19,7 @@ public class IniSyntaxHighlighter extends SyntaxHighlighterBase {
 
     private static final Map<IElementType, TextAttributesKey> ATTRIBUTES = new HashMap<IElementType, TextAttributesKey>();
 
+    @NotNull
     public static Map<IElementType, TextAttributesKey> getTextAttributesMap() {
         return ATTRIBUTES;
     }

@@ -7,13 +7,15 @@ import com.intellij.psi.tree.IElementType;
 import ini4idea.IniElementTypes;
 import ini4idea.lang.IniTokenTypes;
 import ini4idea.lang.psi.stubs.DirectiveImpl;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Konstantin Ulitin
  */
 public class IniPsiCreator {
 
-    public static PsiElement createElement(ASTNode node) {
+    @NotNull
+    public static PsiElement createElement(@NotNull ASTNode node) {
         final IElementType astNodeType = node.getElementType();
         // TODO try to make some enum for here
         if (astNodeType == IniElementTypes.DIRECTIVE) {

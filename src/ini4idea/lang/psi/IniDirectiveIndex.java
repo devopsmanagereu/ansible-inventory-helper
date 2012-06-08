@@ -35,11 +35,13 @@ public class IniDirectiveIndex extends ScalarIndexExtension<String> {
         return myDataIndexer;
     }
 
+    @NotNull
     @Override
     public KeyDescriptor<String> getKeyDescriptor() {
         return myKeyDescriptor;
     }
 
+    @NotNull
     @Override
     public FileBasedIndex.InputFilter getInputFilter() {
         return myInputFilter;
@@ -58,7 +60,7 @@ public class IniDirectiveIndex extends ScalarIndexExtension<String> {
     private static class MyDataIndexer implements DataIndexer<String, Void, FileContent> {
         @Override
         @NotNull
-        public Map<String, Void> map(final FileContent inputData) {
+        public Map<String, Void> map(@NotNull final FileContent inputData) {
             String className;
             Map<String, Void> result = new HashMap<String, Void>();
             try {
@@ -85,7 +87,7 @@ public class IniDirectiveIndex extends ScalarIndexExtension<String> {
 
     private static class MyInputFilter implements FileBasedIndex.InputFilter {
         @Override
-        public boolean acceptInput(final VirtualFile file) {
+        public boolean acceptInput(@NotNull final VirtualFile file) {
             return file.getFileType() == IniFileType.INSTANCE;
         }
     }

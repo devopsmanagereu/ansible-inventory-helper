@@ -30,11 +30,13 @@ public class IniParserDefinition implements ParserDefinition {
         return new IniLexer();
     }
 
+    @NotNull
     @Override
     public PsiParser createParser(Project project) {
         return new IniParser();
     }
 
+    @NotNull
     @Override
     public IFileElementType getFileNodeType() {
         return INI_FILE_ELEMENT_TYPE;
@@ -61,7 +63,7 @@ public class IniParserDefinition implements ParserDefinition {
 
     @NotNull
     @Override
-    public PsiElement createElement(ASTNode node) {
+    public PsiElement createElement(@NotNull ASTNode node) {
 
 
         //TODO LOG.error("Alien element type [" + type + "]. Can't create Ini PsiElement for that.");
@@ -69,11 +71,13 @@ public class IniParserDefinition implements ParserDefinition {
         return IniPsiCreator.createElement(node);
     }
 
+    @NotNull
     @Override
-    public PsiFile createFile(FileViewProvider viewProvider) {
+    public PsiFile createFile(@NotNull FileViewProvider viewProvider) {
         return new IniFile(viewProvider);
     }
 
+    @NotNull
     @Override
     public SpaceRequirements spaceExistanceTypeBetweenTokens(ASTNode left, ASTNode right) {
         //return null;  //TODO

@@ -16,6 +16,7 @@ import java.util.Map;
  * @author Alexei Vasin
  */
 public class IniColorSettingsPage implements ColorSettingsPage {
+    @NotNull
     private static final AttributesDescriptor[] ATTRS;
 
     static {

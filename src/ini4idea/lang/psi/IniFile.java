@@ -12,13 +12,13 @@ import org.jetbrains.annotations.NotNull;
  */
 public class IniFile extends PsiFileBase {
 
-  public IniFile(FileViewProvider viewProvider) {
-    super(viewProvider, IniLanguage.INSTANCE);
-  }
+    public IniFile(@NotNull FileViewProvider viewProvider) {
+        super(viewProvider, IniLanguage.INSTANCE);
+    }
 
-  @NotNull
-  @Override
-  public FileType getFileType() {
-    return IniFileType.INSTANCE;  //TODO
-  }
+    @NotNull
+    @Override
+    public FileType getFileType() {
+        return IniFileType.INSTANCE;  //TODO
+    }
 }

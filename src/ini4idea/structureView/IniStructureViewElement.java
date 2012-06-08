@@ -10,6 +10,8 @@ import com.intellij.psi.PsiFile;
 import ini4idea.IniElementTypes;
 import ini4idea.IniIcons;
 import ini4idea.lang.IniTokenTypes;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -46,15 +48,16 @@ public class IniStructureViewElement implements StructureViewTreeElement {
         return ((Navigatable) myElement).canNavigateToSource();
     }
 
-    public boolean isSection(PsiElement e) {
+    public boolean isSection(@NotNull PsiElement e) {
         return e.getNode().getElementType() == IniTokenTypes.SECTION;
     }
 
-    public boolean isDirective(PsiElement e) {
+    public boolean isDirective(@NotNull PsiElement e) {
         return e.getNode().getElementType() == IniElementTypes.DIRECTIVE;
     }
 
 
+    @Nullable
     @Override
     public ItemPresentation getPresentation() {
         return new ItemPresentation() {
@@ -64,11 +67,15 @@ public class IniStructureViewElement implements StructureViewTreeElement {
                     return ((PsiFile) myElement).getName();
                 }
                 if (isDirective(myElement)) {
-                    return myElement.getFirstChild().getText();
+                    if (myElement.getFirstChild() != null) {
+                        return myElement.getFirstChild().getText();
+                    }
                 }
                 if (isSection(myElement)) {
-                    String sectionName = myElement.getFirstChild().getText().replaceAll("\\[|\\]", "");
-                    return sectionName;
+                    if (myElement.getFirstChild() != null) {
+                        String sectionName = myElement.getFirstChild().getText().replaceAll("\\[|\\]", "");
+                        return sectionName;
+                    }
                 }
                 return null;
             }

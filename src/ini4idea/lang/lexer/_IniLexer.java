@@ -5,6 +5,8 @@ package ini4idea.lang.lexer;
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
 import ini4idea.lang.IniTokenTypes;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 
 /**
@@ -58,6 +60,7 @@ public class _IniLexer implements FlexLexer {
                     "\2\7\1\3\1\6\1\10\1\5\1\1\1\0\5\6" +
                     "\3\11";
 
+    @NotNull
     private static int[] zzUnpackAction() {
         int[] result = new int[26];
         int offset = 0;
@@ -65,7 +68,7 @@ public class _IniLexer implements FlexLexer {
         return result;
     }
 
-    private static int zzUnpackAction(String packed, int offset, int[] result) {
+    private static int zzUnpackAction(@NotNull String packed, int offset, int[] result) {
         int i = 0;       /* index in packed string  */
         int j = offset;  /* index in unpacked array */
         int l = packed.length();
@@ -89,6 +92,7 @@ public class _IniLexer implements FlexLexer {
                     "\0\176\0\207\0\77\0\220\0\231\0\207\0\242\0\33" +
                     "\0\77\0\121";
 
+    @NotNull
     private static int[] zzUnpackRowMap() {
         int[] result = new int[26];
         int offset = 0;
@@ -96,7 +100,7 @@ public class _IniLexer implements FlexLexer {
         return result;
     }
 
-    private static int zzUnpackRowMap(String packed, int offset, int[] result) {
+    private static int zzUnpackRowMap(@NotNull String packed, int offset, int[] result) {
         int i = 0;  /* index in packed string  */
         int j = offset;  /* index in unpacked array */
         int l = packed.length();
@@ -126,6 +130,7 @@ public class _IniLexer implements FlexLexer {
                     "\1\0\1\23\7\0\1\25\1\26\1\27\2\25\2\22" +
                     "\1\25\1\32\1\22\1\26\6\22\1\31";
 
+    @NotNull
     private static int[] zzUnpackTrans() {
         int[] result = new int[171];
         int offset = 0;
@@ -133,7 +138,7 @@ public class _IniLexer implements FlexLexer {
         return result;
     }
 
-    private static int zzUnpackTrans(String packed, int offset, int[] result) {
+    private static int zzUnpackTrans(@NotNull String packed, int offset, int[] result) {
         int i = 0;       /* index in packed string  */
         int j = offset;  /* index in unpacked array */
         int l = packed.length();
@@ -153,6 +158,7 @@ public class _IniLexer implements FlexLexer {
     private static final int ZZ_PUSHBACK_2BIG = 2;
     private static final char[] EMPTY_BUFFER = new char[0];
     private static final int YYEOF = -1;
+    @Nullable
     private static java.io.Reader zzReader = null; // Fake
 
     /* error messages for the codes above */
@@ -171,6 +177,7 @@ public class _IniLexer implements FlexLexer {
             "\3\0\4\1\1\11\2\1\1\11\3\1\1\11\2\1" +
                     "\1\0\1\11\5\1\1\11\1\1";
 
+    @NotNull
     private static int[] zzUnpackAttribute() {
         int[] result = new int[26];
         int offset = 0;
@@ -178,7 +185,7 @@ public class _IniLexer implements FlexLexer {
         return result;
     }
 
-    private static int zzUnpackAttribute(String packed, int offset, int[] result) {
+    private static int zzUnpackAttribute(@NotNull String packed, int offset, int[] result) {
         int i = 0;       /* index in packed string  */
         int j = offset;  /* index in unpacked array */
         int l = packed.length();
@@ -209,6 +216,7 @@ public class _IniLexer implements FlexLexer {
     /**
      * this buffer may contains the current text array to be matched when it is cheap to acquire it
      */
+    @Nullable
     private char[] zzBufferArray;
 
     /**
@@ -273,7 +281,8 @@ public class _IniLexer implements FlexLexer {
      * @param packed the packed character translation table
      * @return the unpacked character translation table
      */
-    private static char[] zzUnpackCMap(String packed) {
+    @NotNull
+    private static char[] zzUnpackCMap(@NotNull String packed) {
         char[] map = new char[0x10000];
         int i = 0;  /* index in packed string  */
         int j = 0;  /* index in unpacked array */
@@ -425,6 +434,7 @@ public class _IniLexer implements FlexLexer {
      * @return the next token
      * @throws java.io.IOException if any I/O-Error occurs
      */
+    @Nullable
     public IElementType advance() throws java.io.IOException {
         int zzInput;
         int zzAction;

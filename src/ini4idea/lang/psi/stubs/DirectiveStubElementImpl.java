@@ -12,11 +12,11 @@ import org.jetbrains.annotations.NotNull;
  * @author Alexei Vasin
  */
 public class DirectiveStubElementImpl<T extends StubElement> extends StubBasedPsiElementBase<T> {
-    public DirectiveStubElementImpl(final T stub, IStubElementType nodeType) {
+    public DirectiveStubElementImpl(@NotNull final T stub, @NotNull IStubElementType nodeType) {
         super(stub, nodeType);
     }
 
-    public DirectiveStubElementImpl(final ASTNode node) {
+    public DirectiveStubElementImpl(@NotNull final ASTNode node) {
         super(node);
     }
 

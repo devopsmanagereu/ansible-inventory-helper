@@ -12,7 +12,7 @@ import java.util.List;
  * @author Alexei Vasin
  */
 public class IniFileBlock extends IniBlock {
-    public IniFileBlock(ASTNode fileNode) {
+    public IniFileBlock(@NotNull ASTNode fileNode) {
         super(fileNode, Indent.getNoneIndent());
     }
 

@@ -10,6 +10,7 @@ import com.intellij.psi.util.PsiElementFilter;
 import com.intellij.psi.util.PsiTreeUtil;
 import com.intellij.util.IncorrectOperationException;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * @author Alexei Vasin
@@ -22,11 +23,13 @@ public class IniSectionReference implements PsiReference {
         mySection = section;
     }
 
+    @Nullable
     @Override
     public PsiElement getElement() {
         return mySection.getFirstChild();
     }
 
+    @NotNull
     @Override
     public TextRange getRangeInElement() {
         PsiElement child = mySection.getFirstChild();
@@ -37,7 +40,7 @@ public class IniSectionReference implements PsiReference {
 
     public IniSectionImpl resolve() {
         final PsiElementProcessor.FindFilteredElement<IniSectionImpl> processor = new PsiElementProcessor.FindFilteredElement<IniSectionImpl>(new PsiElementFilter() {
-            public boolean isAccepted(PsiElement element) {
+            public boolean isAccepted(@NotNull PsiElement element) {
                 if (element instanceof IniSectionImpl) {
                     String elementName = ((IniSectionImpl) element).getName();//element.getFirstChild().getText().replaceAll("\\[|\\]", "");
                     String sectionName = mySection.getName();//mySection.getFirstChild().getText().replaceAll("\\[|\\]", "");

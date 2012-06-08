@@ -15,7 +15,7 @@ import java.util.Collection;
 public class IniContributor implements ChooseByNameContributor {
     @NotNull
     @Override
-    public String[] getNames(Project project, boolean includeNonProjectItems) {
+    public String[] getNames(@NotNull Project project, boolean includeNonProjectItems) {
         Collection<String> result = new THashSet<String>();
         result.addAll(IniIndex.getSymbolNames(project));
         return ArrayUtil.toStringArray(result);
@@ -23,7 +23,7 @@ public class IniContributor implements ChooseByNameContributor {
 
     @NotNull
     @Override
-    public NavigationItem[] getItemsByName(String name, String pattern, Project project, boolean includeNonProjectItems) {
+    public NavigationItem[] getItemsByName(@NotNull String name, String pattern, @NotNull Project project, boolean includeNonProjectItems) {
         Collection<NavigationItem> result = new THashSet<NavigationItem>();
         result.addAll(IniIndex.getItemsByName(name, project));
         return result.toArray(new NavigationItem[result.size()]);

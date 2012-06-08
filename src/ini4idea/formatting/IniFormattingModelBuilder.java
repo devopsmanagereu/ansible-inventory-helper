@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 public class IniFormattingModelBuilder implements FormattingModelBuilder {
     @NotNull
     @Override
-    public FormattingModel createModel(PsiElement psiElement, CodeStyleSettings settings) {
+    public FormattingModel createModel(@NotNull PsiElement psiElement, CodeStyleSettings settings) {
         ASTNode node = psiElement.getNode();
         assert node != null;
         PsiFile containingFile = psiElement.getContainingFile();

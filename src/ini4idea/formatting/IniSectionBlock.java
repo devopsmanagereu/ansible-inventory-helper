@@ -13,7 +13,7 @@ import java.util.List;
  * @author Alexei Vasin
  */
 public class IniSectionBlock extends IniBlock {
-    public IniSectionBlock(ASTNode node, Indent indent) {
+    public IniSectionBlock(@NotNull ASTNode node, @NotNull Indent indent) {
         super(node, indent);
     }
 

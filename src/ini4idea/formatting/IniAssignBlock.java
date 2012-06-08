@@ -12,7 +12,7 @@ import java.util.List;
  * @author Alexei Vasin
  */
 public class IniAssignBlock extends IniBlock {
-    public IniAssignBlock(ASTNode node) {
+    public IniAssignBlock(@NotNull ASTNode node) {
         super(node, Indent.getNoneIndent());
     }
 
