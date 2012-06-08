@@ -110,7 +110,7 @@
       <file leaf-file-name="IniAnnotator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ini4idea/IniAnnotator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="46" selection-start="3368" selection-end="3368" vertical-scroll-proportion="0.0">
+            <state line="89" column="46" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1164#1172#0" expanded="true" />
@@ -745,7 +745,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified NotNull annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added intentions to remove duplicate sections and directives" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -772,6 +772,7 @@
     <MESSAGE value="Added completion in directives" />
     <MESSAGE value="Fixed annotator after changing PSI" />
     <MESSAGE value="Modified NotNull annotations" />
+    <MESSAGE value="Added intentions to remove duplicate sections and directives" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -921,7 +922,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ini4idea/IniAnnotator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="46" selection-start="3368" selection-end="3368" vertical-scroll-proportion="0.0">
+        <state line="89" column="46" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1164#1172#0" expanded="true" />
