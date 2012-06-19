@@ -36,7 +36,15 @@ public class IniParser implements PsiParser {
         }
         while (builder.getTokenType() != IniTokenTypes.SECTION && !builder.eof()) {
             // TODO Assert tpkentype == EOL
-            builder.advanceLexer();
+            if (builder.getTokenType() == IniTokenTypes.KEY_CHARACTERS) {
+                parseAssign(builder);
+            } else {
+                builder.advanceLexer();
+            }
+        }
+
+        if (builder.eof()) {
+            return false;
         }
 
         PsiBuilder.Marker section = builder.mark();

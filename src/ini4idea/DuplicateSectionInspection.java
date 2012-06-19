@@ -39,17 +39,19 @@ public class DuplicateSectionInspection extends IniSuppressableInspectionBase {
         for (PsiElement elem : children) {
             if (elem instanceof IniSectionImpl) {
                 PsiElement child = elem.getFirstChild();
-                assert child != null;
-                String sectionKey = child.getText();
+                //assert child != null;
+                if (child != null) {
+                    String sectionKey = child.getText();
 
-                if (sectionSet.contains(sectionKey)) {
-                    TextRange textRange = child.getTextRange();
-                    if (textRange != null) {
-                        descriptors.add(manager.createProblemDescriptor(child, textRange, "Duplicate Section", GENERIC_ERROR_OR_WARNING, true, RemoveDuplicateSectionFix.INSTANCE));
+                    if (sectionSet.contains(sectionKey)) {
+                        TextRange textRange = child.getTextRange();
+                        if (textRange != null) {
+                            descriptors.add(manager.createProblemDescriptor(child, textRange, "Duplicate Section", GENERIC_ERROR_OR_WARNING, true, RemoveDuplicateSectionFix.INSTANCE));
+                        }
+
+                    } else {
+                        sectionSet.add(sectionKey);
                     }
-
-                } else {
-                    sectionSet.add(sectionKey);
                 }
             }
         }
