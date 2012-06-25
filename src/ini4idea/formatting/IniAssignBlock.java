@@ -21,7 +21,7 @@ public class IniAssignBlock extends IniBlock {
     public List<Block> getSubBlocks() {
         List<Block> result = new ArrayList<Block>();
         for (ASTNode node : getNode().getChildren(null)) {
-            if (node.getElementType() != IniTokenTypes.WHITESPACE)// || node.getElementType() == IniTokenTypes.ASSIGN) {
+            if (node.getElementType() != IniTokenTypes.WHITESPACE && node.getElementType() != IniTokenTypes.EOL)// || node.getElementType() == IniTokenTypes.ASSIGN) {
             {
                 result.add(new IniLeafBlock(node));
             }

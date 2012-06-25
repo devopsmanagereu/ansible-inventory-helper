@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <name>Ini4Idea</name>
-    <change-notes>Completion for directives</change-notes>
-    <version>0.9.1</version>
+    <change-notes>Remove duplicate directive and section inspections</change-notes>
+    <version>1.0.2</version>
     <vendor>Alexei Vasin</vendor>
     <idea-version since-build="112.0"/>
 

@@ -3,6 +3,7 @@ package ini4idea.formatting;
 import com.intellij.formatting.*;
 import com.intellij.lang.ASTNode;
 import ini4idea.lang.IniTokenTypes;
+import ini4idea.lang.psi.stubs.DirectiveStubElementType;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -23,6 +24,10 @@ public class IniFileBlock extends IniBlock {
         for (ASTNode node : getNode().getChildren(null)) {
             if (node.getElementType() == IniTokenTypes.SECTION || node.getElementType() == IniTokenTypes.COMMENT) {
                 blocks.add(new IniSectionBlock(node, Indent.getNoneIndent()));
+            } else if (node.getElementType() == IniTokenTypes.LVAL) {
+                blocks.add(new IniLeafBlock(node));
+            } else if (node.getElementType() instanceof DirectiveStubElementType) {
+                blocks.add(new IniAssignBlock(node));
             }
         }
         return blocks;

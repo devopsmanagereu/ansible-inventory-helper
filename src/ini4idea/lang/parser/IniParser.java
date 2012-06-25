@@ -85,9 +85,12 @@ public class IniParser implements PsiParser {
         builder.advanceLexer();
 
         PsiBuilder.Marker rval = builder.mark();
-        while (parseValue(builder)) {
+        if (parseValue(builder)) {
+            rval.done(IniTokenTypes.RVAL);
+        } else {
+            rval.drop();
         }
-        rval.done(IniTokenTypes.RVAL);
+
 
 //        assign.done(IniTokenTypes.ASSIGN);
         assign.done(IniElementTypes.DIRECTIVE);
