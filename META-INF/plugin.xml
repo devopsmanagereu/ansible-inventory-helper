@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <name>Ini4Idea</name>
     <change-notes>Remove duplicate directive and section inspections</change-notes>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <vendor>Alexei Vasin</vendor>
     <idea-version since-build="112.0"/>
 
@@ -19,7 +19,7 @@
         <syntaxHighlighter key="Ini" implementationClass="ini4idea.highlighter.IniSyntaxHighlighter"/>
         <lang.parserDefinition language="Ini" implementationClass="ini4idea.lang.parser.IniParserDefinition"/>
         <lang.foldingBuilder language="Ini" implementationClass="ini4idea.folding.IniFoldingBuilder"/>
-        <annotator language="Ini" implementationClass="ini4idea.IniAnnotator"/>
+        <!--<annotator language="Ini" implementationClass="ini4idea.IniAnnotator"/>-->
         <lang.formatter language="Ini" implementationClass="ini4idea.formatting.IniFormattingModelBuilder"/>
         <lang.psiStructureViewFactory language="Ini"
                                       implementationClass="ini4idea.structureView.IniStructureViewFactory"/>
@@ -38,6 +38,13 @@
                          groupKey="ini.files.inspection.group.display.name"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="ini4idea.DuplicateSectionInspection"/>
+
+        <localInspection language="Ini" shortName="DuplicateKeyInSection" bundle="ini4idea.IniBundle"
+                         key="ini.duplicate.directive.inspection.display.name"
+                         groupKey="ini.files.inspection.group.display.name"
+                         enabledByDefault="true" level="WARNING"
+                         implementationClass="ini4idea.DuplicateKeyInspection"/>
+
     </extensions>
 
 </idea-plugin>
